@@ -16,15 +16,14 @@ import com.flaviofaria.kenburnsview.KenBurnsView;
 
 public class Splash extends Activity {
 
-    private static int b = 5000;
+    int b = 5000;
     KenBurnsView a;
-    private Handler c;
-    private Runnable d;
+    Handler c;
+    Runnable d;
     ImageView splash;
 
     public Splash() {
     }
-
 
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -37,7 +36,6 @@ public class Splash extends Activity {
         a = (KenBurnsView) findViewById(R.id.splash_image);
         splash = (ImageView) findViewById(R.id.splash_logo);
 
-
         Animation anim = AnimationUtils.loadAnimation(Splash.this, R.anim.translate_top_to_center);
         anim.setInterpolator((new AccelerateDecelerateInterpolator()));
         anim.setFillAfter(true);
@@ -47,7 +45,6 @@ public class Splash extends Activity {
         d = new _cls1();
         c.postDelayed(d, b);
         c.sendEmptyMessage(1);
-
     }
 
 
@@ -84,6 +81,4 @@ public class Splash extends Activity {
 
         }
     }
-
-
 }
